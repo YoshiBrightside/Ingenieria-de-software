@@ -1,0 +1,7 @@
+com/mapita/controlador/AgregarUsuario.class
+com/mapita/modelo/HibernateUtil.class
+com/mapita/modelo/AbstractDAO.class
+com/mapita/modelo/Marcador.class
+com/mapita/modelo/MarcadorDAO.class
+com/mapita/modelo/UsuarioDAO.class
+com/mapita/modelo/Usuario.class

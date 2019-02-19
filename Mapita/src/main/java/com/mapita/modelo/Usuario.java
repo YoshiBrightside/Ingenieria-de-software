@@ -15,8 +15,8 @@ public class Usuario  implements java.io.Serializable {
      private int idusuario;
      private String nombre;
      private String correo;
-     private String contraseña;
-     private Date fecha;
+     private String contrasenia;
+     private Date fechanacimiento;
      private Set marcadors = new HashSet(0);
 
     public Usuario() {
@@ -27,12 +27,12 @@ public class Usuario  implements java.io.Serializable {
         this.idusuario = idusuario;
         this.nombre = nombre;
     }
-    public Usuario(int idusuario, String nombre, String correo, String contraseña, Date fecha, Set marcadors) {
+    public Usuario(int idusuario, String nombre, String correo, String contraseña, Date fechanacimiento, Set marcadors) {
        this.idusuario = idusuario;
        this.nombre = nombre;
        this.correo = correo;
-       this.contraseña = contraseña;
-       this.fecha = fecha;
+       this.contrasenia = contraseña;
+       this.fechanacimiento = fechanacimiento;
        this.marcadors = marcadors;
     }
    
@@ -57,19 +57,19 @@ public class Usuario  implements java.io.Serializable {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    public String getContraseña() {
-        return this.contraseña;
+    public String getContrasenia() {
+        return this.contrasenia;
     }
     
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
-    public Date getFecha() {
-        return this.fecha;
+    public Date getFechanacimiento() {
+        return this.fechanacimiento;
     }
     
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFechanacimiento(Date fechanacimiento) {
+        this.fechanacimiento = fechanacimiento;
     }
     public Set getMarcadors() {
         return this.marcadors;
