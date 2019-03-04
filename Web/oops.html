@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Theme Made By www.w3schools.com -->
-    <title>Registrarse</title>
+    <title>¡Rayos!</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -26,6 +26,7 @@
         font: 400 15px Lato, sans-serif;
         line-height: 1.8;
         color: #818181;
+        background: #455a64;
       }
       h2 {
         font-size: 24px;
@@ -204,80 +205,35 @@
           font-size: 150px;
         }
       }
+    .margin {margin-bottom: 45px;}
+    .bg-1 { 
+        background-color: #455a64; /* Green */
+        color: #ffffff;
+    }
+    .container-fluid {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .navbar-nav  li a:hover {
+        color: #455a64 !important;
+    }
+
+    a{
+        color: #ffffff;
+    }
     </style>
   </head>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <img src="src/assets/OpossumLogo.png" alt="logo" height="50" />
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">PUMAPITA</a></li>
-            <li><a href="index.html">OPOSSUM SOLUTIONS</a></li>
-            <li><a href="login.html">ENTRAR</a></li>
-            <li><a href="#registrarse">REGISTRARSE</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Container (Pricing Section) -->
-    <div id="registrarse" class="container-fluid">
-      <div class="text-center">
-      </div>
-        <div class="text-center">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h1>Registrarse</h1>
-            </div>
-            <div class="panel-body">
-              <p><strong>Nombre de usuario</strong></p>
-              <input
-              type="email"
-              class="form-control"
-              size="50"
-              placeholder="Nombre de usuario"
-              required
-              />
-              <p><strong>Correo electrónico</strong></p>
-              <input
-              type="email"
-              class="form-control"
-              size="50"
-              placeholder="Correo electrónico"
-              required
-              />
-              <p><strong>Contraseña</strong></p>
-              <input
-              type="password"
-              class="form-control"
-              size="16"
-              placeholder="¡Shh! Aquí va tu contraseña"
-              required
-              />
-            </div>
-            <div class="panel-footer">
-              <!-- <h3>$49</h3> 
-              <h4>per month</h4> -->
-              <div class="input-group-btn">
-                  <a href="oops.html"><button type="button" class="btn btn-danger">Registrarse</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-  </body>
+  <body>
+    <div class="bg-1 text-center">
+    <h1 class="margin"><strong>¡Oh No!</strong></h1>
+    <img src="src/assets/error1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+    <h3>¡Algo salió mal!</h3>
+
+        <div class="input-group-btn">
+            <a href="index.html"><button type="button" class="btn btn-danger">Sácame de aquí</button></a>
+        </div>
+    </div>
+    </body>
 </html>
