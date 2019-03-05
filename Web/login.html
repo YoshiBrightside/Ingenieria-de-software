@@ -243,30 +243,53 @@
               <h1>Entrar</h1>
             </div>
             <div class="panel-body">
-              <p><strong>Correo electrónico</strong></p>
-              <input
-              type="email"
-              class="form-control"
-              size="50"
-              placeholder="Correo con el que te registraste"
-              required
-              />
-              <p><strong>Contraseña</strong></p>
-              <input
-              type="password"
-              class="form-control"
-              size="16"
-              placeholder="¡Shh! Aquí va tu contraseña"
-              required
-              />
-            </div>
-            <div class="panel-footer">
-              <!-- <h3>$49</h3> 
-              <h4>per month</h4> -->
-              <div class="input-group-btn">
-                  <a href="oops.html"><button type="button" class="btn btn-danger">Entrar</button></a>
+              <form action="oops.html" onsubmit="return checkForm(this);">
+                <p><strong>Nombre de Usuario</strong></p>
+                <input
+                name="username"
+                type="username"
+                class="form-control"
+                size="50"
+                placeholder="Tu nombre de usuario"
+                required
+                />
+                <p><strong>Contraseña</strong></p>
+                <input
+                name="pwd1"
+                type="password"
+                class="form-control"
+                size="16"
+                placeholder="¡Shh! Aquí va tu contraseña"
+                required
+                />
+              <div class="panel-footer">
               </div>
+                <p>
+                  <input class="btn btn-danger" type="submit" value="Entrar">
+                </p>
+              </form>
             </div>
+
+            <script>
+              function checkForm(form) {
+                if(form.username.value == "") {
+                  alert("Error: ¡El nombre de usuario no puede estar vacío!");
+                  form.username.focus();
+                  return false;
+                }
+                if(form.username.value == "usuario_incorrecto") {
+                  alert("Error: ¡El nombre de usuario o la contraseña no coincide!");
+                  form.username.focus();
+                  return false;
+                }
+                if(form.pwd1.value == "") {
+                  alert("Error: ¡La contraseña no puede estar vacía!");
+                  form.pwd1.focus();
+                  return false;
+                }
+                alert("¡Bienvenido "+form.username.value+"!");
+              }
+              </script>
           </div>
         </div>
       </div>

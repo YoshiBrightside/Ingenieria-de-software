@@ -234,50 +234,98 @@
     </nav>
 
     <!-- Container (Pricing Section) -->
-    <div id="entrar" class="container-fluid">
-      <div class="text-center">
-      </div>
+    <div id="registrarse" class="container-fluid">
         <div class="text-center">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h1>Agregar Informadores</h1>
-            </div>
-            <div class="panel-body">
-              <p><strong>Nombre de usuario</strong></p>
-              <input
-              type="email"
-              class="form-control"
-              size="50"
-              placeholder="Nombre de usuario"
-              required
-              />
-              <p><strong>Correo electrónico</strong></p>
-              <input
-              type="email"
-              class="form-control"
-              size="50"
-              placeholder="Correo electrónico"
-              required
-              />
-              <p><strong>Contraseña</strong></p>
-              <input
-              type="password"
-              class="form-control"
-              size="16"
-              placeholder="¡Shh! Aquí va la contraseña"
-              required
-              />
-            </div>
-            <div class="panel-footer">
-              <!-- <h3>$49</h3> 
-              <h4>per month</h4> -->
-              <div class="input-group-btn">
-                  <a href="oops.html"><button type="button" class="btn btn-danger">Entrar</button></a>
+        </div>
+          <div class="text-center">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Registrar Informador</h1>
               </div>
+              <div class="panel-body">
+                <form action="oops.html" onsubmit="return checkForm(this);">
+                  <p><strong>Nombre de usuario</strong>
+                  <input
+                  name="username"
+                  type="text"
+                  class="form-control"
+                  size="50"
+                  placeholder="Nombre de usuario"
+                  required
+                  /></p>
+                  <p><strong>Correo electrónico</strong>
+                  <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  size="50"
+                  placeholder="Correo electrónico"
+                  required
+                  /></p>
+                  <p><strong>Contraseña</strong>
+                    <input
+                    name="pwd1"
+                    type="password"
+                    class="form-control"
+                    size="16"
+                    placeholder="¡Shh! Aquí va tu contraseña"
+                    required
+                  /></p>
+                  <p><strong>Repite tu contraseña</strong>
+                    <input
+                    name="pwd2"
+                    type="password"
+                    class="form-control"
+                    size="16"
+                    placeholder="¡Shh! Aquí va tu contraseña"
+                    required
+                    /></p>
+                    <div class="panel-footer">
+                    </div>
+                  <p>
+                    <input class="btn btn-danger" type="submit" value="Registrarse">
+                  </p>
+                </form>
+                </div>
             </div>
           </div>
         </div>
-      </div>
-
-  </body>
-</html>
+  
+        <script>
+        function checkForm(form)
+        {
+          if(form.username.value == "") {
+            alert("Error: ¡El nombre de usuario no puede estar vacío!");
+            form.username.focus();
+            return false;
+          }
+          re = /^\w+$/;
+          if(!re.test(form.username.value)) {
+            alert("Error: ¡El nombre de usuario sólo puede tener letras, números y guiones bajos!");
+            form.username.focus();
+            return false;
+          }
+      
+          if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+            if(form.pwd1.value.length < 6) {
+              alert("Error: ¡La contraseña debe tener al menos seis caracteres!");
+              form.pwd1.focus();
+              return false;
+            }
+            if(form.pwd1.value == form.username.value) {
+              alert("Error: ¡La contraseña debe ser diferente al nombre de usuario!");
+              form.pwd1.focus();
+              return false;
+            }
+          } else {
+            alert("Error: Las contraseñas no coinciden, ¡Asegúrate que hayas escrito bien tu contraseña!");
+            form.pwd1.focus();
+            return false;
+          }
+          alert("¡Informador registrado exitosamente!");
+          return true;
+        }
+      </script>
+    </body>
+  </html>
+  
